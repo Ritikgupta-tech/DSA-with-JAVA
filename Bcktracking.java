@@ -17,10 +17,37 @@ public class Bcktracking{
         }
         System.out.println();
     }
+
+
+
+    // subset find 
+    public static void findsubsets(String str , String ans,int i){
+        // base case 
+        if (i==str.length()) {
+            if (ans.length()==0) {
+                System.out.println("null");
+                
+            } else {
+                System.out.println(ans);
+            }
+            
+            return;
+        }
+        //recursion 
+
+        //yes choice 
+
+        findsubsets(str, ans+str.charAt(i), i+1);
+        // no choices 
+        findsubsets(str, ans, i+1);
+    }
     public static void main(String[] args) {
         int arr[]=new int[5];
         changeArr(arr,0,1);
         printArr(arr);
+        // find subsets
+        String str="abc";
+        findsubsets(str, " ", 0);
         
 
     }
