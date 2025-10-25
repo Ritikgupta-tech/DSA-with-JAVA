@@ -41,6 +41,26 @@ public class Bcktracking{
         // no choices 
         findsubsets(str, ans, i+1);
     }
+
+
+    public static void findPermutation(String str,String ans ){
+        // bse case 
+        if (str.length()==0) {
+            System.out.println(ans);
+            return;
+            
+        }
+
+
+        // recursion 
+        for (int i = 0; i <str.length(); i++) {
+            char curr=str.charAt(i);
+            //"abcde" => "ab" +"de" =  "abde"
+            String Newstr =str.substring(0,i) + str.substring(i+1);
+            findPermutation(Newstr, ans+curr);
+            
+        }
+    }
     public static void main(String[] args) {
         int arr[]=new int[5];
         changeArr(arr,0,1);
@@ -48,6 +68,10 @@ public class Bcktracking{
         // find subsets
         String str="abc";
         findsubsets(str, " ", 0);
+
+
+        //find permitations O(n*n!)= tc
+        findPermutation(str, "");
         
 
     }
