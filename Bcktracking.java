@@ -41,7 +41,8 @@ public class Bcktracking{
         // no choices 
         findsubsets(str, ans, i+1);
     }
-
+     
+     // FIND PERMUTATION
 
     public static void findPermutation(String str,String ans ){
         // bse case 
@@ -61,7 +62,10 @@ public class Bcktracking{
             
         }
     }
-    public static void main(String[] args) {
+
+
+    // n-queens chess BOARD
+        public static void main(String[] args) {
         int arr[]=new int[5];
         changeArr(arr,0,1);
         printArr(arr);
@@ -72,7 +76,5 @@ public class Bcktracking{
 
         //find permitations O(n*n!)= tc
         findPermutation(str, "");
-        
-
     }
 }
