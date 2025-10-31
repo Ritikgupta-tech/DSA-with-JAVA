@@ -59,7 +59,7 @@ public class CHessboard{
         }
     }
     public static void main (String args[]){
-        int n=2;
+        int n=4;
         char board[][]= new char[n][n];
         // initialize 
         for (int i = 0; i <n; i++) {
